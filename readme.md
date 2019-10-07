@@ -7,7 +7,7 @@
 UIRouter is available as a NuGet package. You can install it using the NuGet Package Console window:
 
 ```
-PM> Install-Package UIRouter
+PM> Install-Package UIRouter.OWIN
 ```
 
 After installation, update your existing [OWIN Startup](http://www.asp.net/aspnet/overview/owin-and-katana/owin-startup-class-detection) file with the following lines of code. 
