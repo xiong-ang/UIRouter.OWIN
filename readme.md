@@ -52,6 +52,7 @@ public void Configuration(IAppBuilder app)
         
         // Optional, config log webapi router
         LogRouter = "api/log"
+        // Default log handler will write to trace
     });
 }
 ```
