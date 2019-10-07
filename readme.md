@@ -48,11 +48,8 @@ public void Configuration(IAppBuilder app)
 {
     app.UseUIRouter(new UIRouterConfig
     {
-        // Config multiple maps between url router and file folder
-        UIRouter = { 
-            { "1/ui1", "UIs/ui1" }, //{url router, file folder}
-            { "2/ui2", "UIs/ui2" }
-        },
+        UIRouter = ...,
+        
         // Optional, config log webapi router
         LogRouter = "api/log"
     });
@@ -65,14 +62,9 @@ public void Configuration(IAppBuilder app)
 {
     app.UseUIRouter(new UIRouterConfig
     {
-        // Config multiple maps between url router and file folder
-        UIRouter = { 
-            { "1/ui1", "UIs/ui1" }, //{url router, file folder}
-            { "2/ui2", "UIs/ui2" },
-            { "/", "UIs/ui2" }
-        },
-        // Optional, config log webapi router
-        LogRouter = "api/log",
+        UIRouter = ...,
+        LogRouter = ...,
+        
         // Optional, config log handler
         LogHandler = new CustomedLogHandler()
     });
