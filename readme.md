@@ -1,32 +1,93 @@
 # UIRouter for OWIN
 > A OWIN middleware for hosting static files and log webapi.
 
-## Usage
-This is a OWIN middlware, so we need to create startup class.
-```C#
-[assembly: OwinStartup(typeof(Demo.Simple.Startup))]
+## Installation
+-------------
 
-public class Startup
+UIRouter is available as a NuGet package. You can install it using the NuGet Package Console window:
+
+```
+PM> Install-Package UIRouter
+```
+
+After installation, update your existing [OWIN Startup](http://www.asp.net/aspnet/overview/owin-and-katana/owin-startup-class-detection) file with the following lines of code. 
+
+```csharp
+public void Configuration(IAppBuilder app)
 {
-    public void Configuration(IAppBuilder app)
+    app.UseUIRouter(new UIRouterConfig
     {
-        app.UseUIRouter(new UIRouterConfig
-        {
-            // Config multiple maps between url router and file folder
-            UIRouter = { 
-                { "1/ui1", "UIs/ui1" },
-                { "2/ui2", "UIs/ui2" },
-                { "/", "UIs/ui2" }
-            },
-            // Config log webapi router
-            LogRouter = "api/log",
-            // Config log handler
-            LogHandler = new MyLogHandler()
-        });
-    }
+        // Config multiple maps between url router and file folder
+        UIRouter = { 
+            { "1/ui1", "UIs/ui1" }, //{url router, file folder}
+            { "2/ui2", "UIs/ui2" }
+        }
+    });
 }
 ```
 
+## Usage
+1. Host static files
+```csharp
+public void Configuration(IAppBuilder app)
+{
+    app.UseUIRouter(new UIRouterConfig
+    {
+        // Config multiple maps between url router and file folder
+        UIRouter = { 
+            { "1/ui1", "UIs/ui1" }, //{url router, file folder}
+            { "2/ui2", "UIs/ui2" }
+        }
+    });
+}
+```
+
+2. Host log webapi
+```csharp
+public void Configuration(IAppBuilder app)
+{
+    app.UseUIRouter(new UIRouterConfig
+    {
+        // Config multiple maps between url router and file folder
+        UIRouter = { 
+            { "1/ui1", "UIs/ui1" }, //{url router, file folder}
+            { "2/ui2", "UIs/ui2" }
+        },
+        // Optional, config log webapi router
+        LogRouter = "api/log"
+    });
+}
+```
+
+3. Custom log handler
+```csharp
+public void Configuration(IAppBuilder app)
+{
+    app.UseUIRouter(new UIRouterConfig
+    {
+        // Config multiple maps between url router and file folder
+        UIRouter = { 
+            { "1/ui1", "UIs/ui1" }, //{url router, file folder}
+            { "2/ui2", "UIs/ui2" },
+            { "/", "UIs/ui2" }
+        },
+        // Optional, config log webapi router
+        LogRouter = "api/log",
+        // Optional, config log handler
+        LogHandler = new CustomedLogHandler()
+    });
+}
+```
+
+```C#
+class CustomedLogHandler : ILogHandler
+{
+    public void Log(LoggingEvent loggingEvent)
+    {
+        Console.WriteLine($"{DateTime.Now} - {loggingEvent.Level} - {loggingEvent.Message}");
+    }
+}
+```   
 ## Examples
 ### Console Example
 This is a simple demo.
