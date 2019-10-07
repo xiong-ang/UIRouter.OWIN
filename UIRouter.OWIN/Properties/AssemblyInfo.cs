@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("UIRouter.OWIN")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Rockwell Automation")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UIRouter.OWIN")]
-[assembly: AssemblyCopyright("Copyright © Rockwell Automation 2019")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

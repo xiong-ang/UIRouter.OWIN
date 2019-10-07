@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UIRouter.CEF.Example"
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1200">
     <Grid>
         <cefSharp:ChromiumWebBrowser x:Name="Cef"/>
     </Grid>

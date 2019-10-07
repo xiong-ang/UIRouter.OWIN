@@ -10,12 +10,12 @@ namespace UIRouter.OWIN.Test
         [TestMethod]
         public void TestFormatStaticUIRouter()
         {
-            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter(string.Empty), ""), "Format Error");
-            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter(""), ""), "Format Error");
-            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter("/"), ""), "Format Error");
+            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter(string.Empty), ""), "Format Empty Error");
+            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter(""), ""), "Format Empty String Error");
+            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter("/"), ""), "Format / Error");
 
-            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter("ui/ui1"), "/ui/ui1"), "Format Error");
-            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter("/ui/ui1"), "/ui/ui1"), "Format Error");
+            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter("ui/ui1"), "/ui/ui1"), "Format ui Error");
+            Assert.IsTrue(string.Equals(RouterHelper.FormatStaticUIRouter("/ui/ui1"), "/ui/ui1"), "Format /ui Error");
         }
 
         [TestMethod]

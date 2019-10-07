@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("UIRouter.CEF.Example")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Rockwell Automation")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UIRouter.CEF.Example")]
-[assembly: AssemblyCopyright("Copyright © Rockwell Automation 2019")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
