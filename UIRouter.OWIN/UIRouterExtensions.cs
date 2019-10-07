@@ -60,7 +60,7 @@ namespace UIRouter.OWIN
                     app.UseFileServer(options);
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 throw new Exception($"UI router settings contain error: {e.ToString()}");
             }

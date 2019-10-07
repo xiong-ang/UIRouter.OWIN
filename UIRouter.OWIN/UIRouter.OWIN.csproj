@@ -90,9 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ILogHandler.cs" />
-    <Compile Include="Log\DefaultLogHandler.cs" />
-    <Compile Include="Log\LogController.cs" />
-    <Compile Include="Log\LoggingEvent.cs" />
+    <Compile Include="LogSvc\DefaultLogHandler.cs" />
+    <Compile Include="LogSvc\LogController.cs" />
+    <Compile Include="LogSvc\LoggingEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\RouterHelper.cs" />
     <Compile Include="UIRouterConfig.cs" />
