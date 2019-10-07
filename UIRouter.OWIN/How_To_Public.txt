@@ -1,0 +1,9 @@
+﻿STEP 1:Download NuGet.exe
+STEP 2:Development
+STEP 3:Create and modify nuspec file
+	Create: nuget spec
+	Modify: NuGet Package Explorer
+STEP 4:Create Package
+	nuget pack DaxnetNugetTest.csproj
+	nuget pack DaxnetNugetTest.csproj -Prop Configuration=Release
+STEP 5:Upload Package
