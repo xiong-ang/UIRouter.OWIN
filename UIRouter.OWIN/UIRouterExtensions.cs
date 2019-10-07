@@ -21,23 +21,26 @@ namespace UIRouter.OWIN
             config = config.GetFormatConfig();
 
 
-            //use log api middleware
-            LoggingEvent.LogHandler = config.LogHandler;
+            if (!string.IsNullOrWhiteSpace(config.LogRouter))
+            {
+                //use log api middleware
+                LoggingEvent.LogHandler = config.LogHandler;
 
-            try
-            {
-                var webApiConfig = new HttpConfiguration();
-                webApiConfig.Routes.MapHttpRoute(
-                    name: "UIRouterLoggApi",
-                    routeTemplate: config.LogRouter,
-                    defaults: new { controller = "Log" }
-                );
-                app.UseWebApi(webApiConfig);
-            }
-            catch (System.Exception)
-            {
-                throw new Exception("Log router setting constains error!");
-            }
+                try
+                {
+                    var webApiConfig = new HttpConfiguration();
+                    webApiConfig.Routes.MapHttpRoute(
+                        name: "UIRouterLoggApi",
+                        routeTemplate: config.LogRouter,
+                        defaults: new { controller = "Log" }
+                    );
+                    app.UseWebApi(webApiConfig);
+                }
+                catch (System.Exception)
+                {
+                    throw new Exception("Log router setting constains error!");
+                }
+            } 
 
 
             try

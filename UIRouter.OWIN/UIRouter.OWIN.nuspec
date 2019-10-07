@@ -1,18 +1,24 @@
-<?xml version="1.0"?>
-<package >
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>4dedb759-a305-4d87-a463-bf919a5b7a37</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>Barret</authors>
     <owners>Barret</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/xiong-ang/UIRouter.OWIN</projectUrl>
+    <iconUrl>https://github.com/xiong-ang/UIRouter.OWIN/blob/master/UIRouter.OWIN/uiRouter.png?raw=true</iconUrl>
     <description>A OWIN middleware for hosting static files and log webapi.</description>
     <releaseNotes>V1.0.0 Release.</releaseNotes>
     <copyright>Copyright 2019</copyright>
+    <language></language>
     <tags>UIRouter OWIN</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Owin" version="5.2.7" />
+      <dependency id="Microsoft.Owin.Cors" version="4.0.1" />
+      <dependency id="Microsoft.Owin" version="4.0.1" />
+      <dependency id="Microsoft.Owin.StaticFiles" version="4.0.1" />
+    </dependencies>
   </metadata>
 </package>
