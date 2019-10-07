@@ -1,4 +1,6 @@
-# UIRouter for OWIN
+# UIRouter.OWIN
+[![Build status](https://ci.appveyor.com/api/projects/status/bpq3qe60xtap6pg1?svg=true)](https://ci.appveyor.com/project/xiong-ang/uirouter-owin)    
+
 > A OWIN middleware for hosting static files and log webapi.
 
 ## Installation
